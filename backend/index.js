@@ -15,7 +15,11 @@ const __dirname = path.resolve();
 
 app.use(
   cors({
-    origin: 'https://mern-auth-delta-one.vercel.app',
+    origin:
+      process.env.NODE_ENV === 'production'
+        ? 'https://mern-auth-delta-one.vercel.app'
+        : 'http://localhost:5173',
+    credentials: true,
   }),
 );
 app.use(express.json());
