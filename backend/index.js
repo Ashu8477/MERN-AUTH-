@@ -17,7 +17,7 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === 'production'
-        ? 'https://mern-auth-delta-one.vercel.app/'
+        ? 'https://mern-auth-delta-one.vercel.app'
         : 'http://localhost:5173',
     credentials: true,
   }),
