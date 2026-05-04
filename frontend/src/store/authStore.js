@@ -1,10 +1,7 @@
 import axios from 'axios';
 import { create } from 'zustand';
 
-const API_URL =
-  import.meta.env.MODE === 'development'
-    ? 'https://mern-auth-ox3f.onrender.com'
-    : '/api/auth';
+const API_URL = 'https://mern-auth-ox3f.onrender.com/api/auth';
 
 axios.defaults.withCredentials = true;
 
